@@ -62,7 +62,7 @@ router.post('/requestPasswordReset',async(req,res)=>{
                 <div style="font-family: Arial, sans-serif; text-align: center;">
                     <h2>Password Reset Request</h2>
                     <p>Click the button below to reset your password:</p>
-                    <a href="http://localhost:3000/api/user/reset-password?token=${token}&email=${email}"
+                    <a href="https://warm-concha-72a5fc.netlify.app/api/user/reset-password?token=${token}&email=${email}"
                        style="
                            display: inline-block;
                            padding: 10px 20px;
@@ -100,7 +100,7 @@ router.get('/reset-password',  async(req, res) => {
     });
     // Verify the token
     if (user) {
-        res.redirect(`http://localhost:5173/newform?token=${token}&email=${email}`);
+        res.redirect(`https://warm-concha-72a5fc.netlify.app/newform?token=${token}&email=${email}`);
     } else {
         res.status(400).send('Invalid or expired token.');
     }
