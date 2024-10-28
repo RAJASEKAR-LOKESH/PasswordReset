@@ -100,7 +100,7 @@ router.get('/reset-password',  async(req, res) => {
     });
     // Verify the token
     if (user) {
-        res.redirect(`tranquil-sopapillas-954548.netlify.app/newform?token=${token}&email=${email}`);
+        res.redirect(`deluxe-elf-98c290.netlify.app/newform?token=${token}&email=${email}`);
     } else {
         res.status(400).send('Invalid or expired token.');
     }
