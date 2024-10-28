@@ -62,7 +62,7 @@ router.post('/requestPasswordReset',async(req,res)=>{
                 <div style="font-family: Arial, sans-serif; text-align: center;">
                     <h2>Password Reset Request</h2>
                     <p>Click the button below to reset your password:</p>
-                    <a href="aquamarine-buttercream-b4f1d9.netlify.app?token=${token}&email=${email}"
+                    <a href="moonlit-melba-b516da.netlify.app/newform?token=${token}&email=${email}"
                        style="
                            display: inline-block;
                            padding: 10px 20px;
