@@ -62,7 +62,7 @@ router.post('/requestPasswordReset',async(req,res)=>{
                 <div style="font-family: Arial, sans-serif; text-align: center;">
                     <h2>Password Reset Request</h2>
                     <p>Click the button below to reset your password:</p>
-                    <a href="https://password-reset-3b2j.onrender.com/api/user/reset-password?token=${token}&email=${email}"
+                    <a href="aquamarine-buttercream-b4f1d9.netlify.app?token=${token}&email=${email}"
                        style="
                            display: inline-block;
                            padding: 10px 20px;
@@ -99,10 +99,10 @@ router.get('/reset-password',  async(req, res) => {
         resetPasswordExpires: { $gt: Date.now() } // Check if token has expired
     });
     // Verify the token
-    if (user) {
-        res.redirect(`deluxe-elf-98c290.netlify.app/newform?token=${token}&email=${email}`);
+   if (user) {
+        res.status(200).json({ message: 'Token is valid' });
     } else {
-        res.status(400).send('Invalid or expired token.');
+        res.status(400).json({ message: 'Invalid or expired token' });
     }
 });
 
